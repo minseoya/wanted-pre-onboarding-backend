@@ -14,10 +14,11 @@ const getPostById = async (postId) => {
   return await postDao.getPostById(postId);
 };
 
-const getPostList = async ({
-  offset = Pagination.Offset,
-  limit = Pagination.Limit,
-}) => {
-  return await postDao.getPostList({ offset, limit });
+const getPostList = async (offset) => {
+  const skip = offset ? (offset - 1) * Pagination.Limit : 0;
+
+  const limit = Pagination.Limit;
+
+  return await postDao.getPostList({ skip, limit });
 };
 module.exports = { getPostList, createPost, deletePostById, getPostById };
