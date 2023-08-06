@@ -33,13 +33,12 @@ const deletePostById = async ({ userId, postId }) => {
   }
 };
 
-const getPostList = async ({ offset, limit }) => {
+const getPostList = async ({ skip, limit }) => {
   try {
-    return await appDataSource.query(
-      ` SELECT * FROM posts
-      LIMIT ? OFFSET ?`,
-      [limit, offset]
-    );
+    return await appDataSource.query(` SELECT * FROM posts LIMIT ? OFFSET ?`, [
+      +limit,
+      +skip,
+    ]);
   } catch (err) {
     throw new DatabaseError();
   }
