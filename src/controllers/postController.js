@@ -25,12 +25,14 @@ const getPostById = catchError(async (req, res) => {
   const { postId } = req.params;
 
   const post = await postService.getPostById(postId);
-  return res.status(200).json({ post });
+  return res.status(200).json(post);
 });
 
 const getPostList = catchError(async (req, res) => {
-  const { offset, limit } = req.params;
-  const post = await postService.getPostList(offset, limit);
+  const { offset = Pagination.Offset } = req.query;
+
+  const post = await postService.getPostList(offset);
+
   return res.status(200).json({ post });
 });
 
