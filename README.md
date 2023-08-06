@@ -2,7 +2,10 @@
 
 # 김민서
 
-## 1. npm install
+## 1.
+
+- npm install
+- dbmate up
 
 ## 2. 해당 프로젝트를 실행하기위해서는 : `nodemon server.js`
 
@@ -19,7 +22,7 @@
   BODY : {
     "email":"12@gmail.com",
     "password":"12345678"
-  } 
+  }
   ```
 
 - **과제 2. 사용자 로그인 엔드포인트**
@@ -146,5 +149,3 @@
     }
     ```
   - Req : 204
-
-
