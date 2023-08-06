@@ -44,4 +44,23 @@ const getPostList = async ({ skip, limit }) => {
   }
 };
 
-module.exports = { createPost, getPostById, deletePostById, getPostList };
+const updatePost = async ({ postId, userId, title, content }) => {
+  try {
+    return await appDataSource.query(
+      `UPDATE posts
+  SET title = ?, content = ?
+  WHERE id = ? AND user_id`,
+      [title, content, postId, userId]
+    );
+  } catch (err) {
+    throw new DatabaseError();
+  }
+};
+
+module.exports = {
+  createPost,
+  getPostById,
+  deletePostById,
+  getPostList,
+  updatePost,
+};

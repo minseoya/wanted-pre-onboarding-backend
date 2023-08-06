@@ -36,4 +36,18 @@ const getPostList = catchError(async (req, res) => {
   return res.status(200).json(post);
 });
 
-module.exports = { createPost, deletePost, getPostById, getPostList };
+const updatePost = catchError(async (req, res) => {
+  const userId = req.user.id;
+  const { postId, title, content } = req.body;
+
+  const post = await postService.updatePost({ postId, userId, title, content });
+  return res.status(201).json(post);
+});
+
+module.exports = {
+  createPost,
+  deletePost,
+  getPostById,
+  getPostList,
+  updatePost,
+};
