@@ -8,7 +8,6 @@ router.post("", checkLogInToken, postController.createPost);
 router.get("", checkLogInToken, postController.getPostList);
 router.delete("/:postId", checkLogInToken, postController.deletePost);
 router.get("/:postId", checkLogInToken, postController.getPostById);
-router.get("/:offset/:limit", checkLogInToken, postController.getPostList);
-router.patch("/:postId", checkLogInToken, postController.getPostList);
+router.patch("", checkLogInToken, postController.updatePost);
 
 module.exports = { router };

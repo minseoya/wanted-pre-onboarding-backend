@@ -3,10 +3,18 @@ const { BaseError } = require("../utils/errors");
 const { Pagination } = require("../utils/enum");
 
 const createPost = async ({ userId, title, content }) => {
-  return await postDao.createPost({ userId, title, content });
+  const post = await postDao.createPost({ userId, title, content });
+
+  return await postDao.getPostById(post.insertId);
 };
 
 const deletePostById = async ({ userId, postId }) => {
+  const [post] = await postDao.getPostById(postId);
+
+  if (post.user_id != userId) {
+    throw new BaseError("UnauthorizedException", 401);
+  }
+
   return await postDao.deletePostById({ userId, postId });
 };
 
@@ -21,4 +29,23 @@ const getPostList = async (offset) => {
 
   return await postDao.getPostList({ skip, limit });
 };
-module.exports = { getPostList, createPost, deletePostById, getPostById };
+
+const updatePost = async ({ postId, userId, title, content }) => {
+  const [post] = await postDao.getPostById(postId);
+
+  if (post.user_id != userId) {
+    throw new BaseError("UnauthorizedException", 401);
+  }
+
+  await postDao.updatePost({ postId, userId, title, content });
+
+  return await postDao.getPostById(postId);
+};
+
+module.exports = {
+  getPostList,
+  createPost,
+  deletePostById,
+  getPostById,
+  updatePost,
+};
