@@ -19,10 +19,10 @@
   - Req :
 
   ```JSON
-  {BODY : {
+  BODY : {
     "email":"12@gmail.com",
     "password":"12345678"
-  } }
+  }
   ```
 
 - **과제 2. 사용자 로그인 엔드포인트**
@@ -30,10 +30,10 @@
   - 'POST' : localhost:3000/users/signIn
   - Req :
     ```JSON
-    {BODY : {
+    BODY : {
     "email":"12@gmail.com",
     "password":"12345678"
-    }}
+    }
     ```
 
 - Res : {token:'ex token'}
@@ -44,10 +44,10 @@
   - Req :
 
   ```JSON
-  {BODY{
+  BODY{
     "title":"wanted",
     "content":"wrap"
-    }}
+    }
   ```
 
   - Res :
@@ -149,11 +149,3 @@
     }
     ```
   - Req : 204
-
-```
-
-```
-
-```
-
-```
