@@ -33,7 +33,7 @@ const getPostList = catchError(async (req, res) => {
 
   const post = await postService.getPostList(offset);
 
-  return res.status(200).json({ post });
+  return res.status(200).json(post);
 });
 
 module.exports = { createPost, deletePost, getPostById, getPostList };
