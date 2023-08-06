@@ -2,7 +2,7 @@
 
 # 김민서
 
-## 1.
+## 1. 필요한 과정
 
 - npm install
 - dbmate up
