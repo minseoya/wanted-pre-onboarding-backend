@@ -2,7 +2,10 @@
 
 # 김민서
 
-## 1. npm install
+## 1.
+
+- npm install
+- dbmate up
 
 ## 2. 해당 프로젝트를 실행하기위해서는 : `nodemon server.js`
 
