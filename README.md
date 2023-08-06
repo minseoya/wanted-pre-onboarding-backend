@@ -1,5 +1,11 @@
 <br></br>
 
+# 김민서
+
+## 1. npm install
+
+## 2. 해당 프로젝트를 실행하기위해서는 : `nodemon server.js`
+
 ## 3. API 요구 사항
 
 회원가입외에 모든 엔드포인트는 token이 필요합니다 header에 Authorization:'token'을 담아서 보내주세요
@@ -32,19 +38,19 @@
     "content":"wrap"
     }
 
-- Res : {
-  "message": "SIGNUP_SUCCESS",
-  "post": [
-  {
-  "id": 17,
-  "title": "exporle",
-  "content": "exporle",
-  "user_id": 3,
-  "created_at": "2023-08-06 15:17:11",
-  "updated_at": null
-  }
-  ]
-  }
+  - Res : {
+    "message": "SIGNUP_SUCCESS",
+    "post": [
+    {
+    "id": 19,
+    "title": "wanted",
+    "content": "wrap",
+    "user_id": 4,
+    "created_at": "2023-08-06 16:34:43",
+    "updated_at": null
+    }
+    ]
+    }
 
 - **과제 4. 게시글 목록을 조회하는 엔드포인트**
 
