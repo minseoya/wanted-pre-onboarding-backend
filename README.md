@@ -5,6 +5,11 @@
 - 8.06 코드완성
 - 8.07일부터 테스트 코드 구현할 예정
 
+## 0. ERD
+
+![image](https://github.com/minseoya/wanted-pre-onboarding-backend/assets/119482288/9d1ddb5e-7e3b-4064-9910-68452e007f04)
+
+
 ## 1. 필요한 과정
 
 - npm install
