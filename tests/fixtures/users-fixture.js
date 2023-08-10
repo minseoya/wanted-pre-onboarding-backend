@@ -1,10 +1,13 @@
 const appDataSource = require("../../src/models/appDataSource");
+const bcrypt = require("bcrypt");
 
 const createUsers = async (userList) => {
   let data = [];
+  const saltRounds = 12;
 
-  for (let user of userList) {
-    data.push([user.email, user.password]);
+  for (const user of userList) {
+    const password = await bcrypt.hash(user.password, saltRounds);
+    data.push([user.email, password]);
   }
 
   return await appDataSource.query(

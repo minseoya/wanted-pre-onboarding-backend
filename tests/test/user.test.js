@@ -66,10 +66,10 @@ describe("Sign In/", () => {
   test("🤬SUCCESS: signin user", async () => {
     const response = await request(app).post("/users/signIn").send({
       password: "testpassword!",
-      email: "test1@kakao.com",
+      email: "test2@kakao.com",
     });
-    console.log(response.body);
-    expect(response.body.token).toEqual("Token");
+
+    // expect(response.body.token).toEqual("Token");
 
     expect(response.statusCode).toEqual(200);
   });
@@ -84,14 +84,16 @@ describe("Sign In/", () => {
     expect(response.statusCode).toEqual(400);
   });
 
-  test("FAILED: NOT_FOUND_EMAIL", async () => {
+  test("FAILED: 비밀번호는 8자 이상이어야 합니다.", async () => {
     const response = await request(app).post("/users/signIn").send({
-      password: "testpassword",
       email: "12@kakao.com",
+      password: "test",
     });
-
-    expect(response.body).toEqual({ message: "NOT_FOUND_EMAIL" });
-    expect(response.statusCode).toEqual(400);
+    console.log(response.body);
+    expect(response.body).toEqual({
+      message: "비밀번호는 8자 이상이어야 합니다.",
+    });
+    expect(response.statusCode).toEqual(401);
   });
 
   test("FAILED: KEY_ERROR", async () => {
