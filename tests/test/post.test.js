@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 
 jest.mock("jsonwebtoken");
 
-describe("Sign up/", () => {
+describe("Post /", () => {
   let app;
 
   beforeAll(async () => {
@@ -17,7 +17,7 @@ describe("Sign up/", () => {
     await userFixture.createUsers([userdata.GsUser, userdata.CuUser]);
   });
 
-  test("🤬SUCCESS: created user", async () => {
+  test("🤬SUCCESS: created post", async () => {
     const response = await request(app)
       .post("/posts")
       .set("authorization", "token")
