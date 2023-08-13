@@ -64,19 +64,16 @@
   - Res :
 
   ```JSON
-  {
-    "message": "SIGNUP_SUCCESS",
-    "post": [
+  [
     {
-    "id": 19,
-    "title": "wanted",
-    "content": "wrap",
-    "user_id": 4,
-    "created_at": "2023-08-06 16:34:43",
-    "updated_at": null
+        "id": 22,
+        "title": "last",
+        "content": "post",
+        "user_id": 5,
+        "created_at": "2023-08-13 17:57:11",
+        "updated_at": null
     }
-    ]
-    }
+  ]
   ```
 
 - **과제 4. 게시글 목록을 조회하는 엔드포인트**
