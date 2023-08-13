@@ -8,9 +8,19 @@ const naverUser = {
   email: "test2@kakao.com",
 };
 
+const GsUser = {
+  password: "testpassword!",
+  email: "test3@kakao.com",
+};
+
+const CuUser = {
+  password: "testpassword!",
+  email: "test4@kakao.com",
+};
+
 const defaltProductListEnum = Object.freeze({
   DEFAULT_LIMIT: 15,
   DEFAULT_OFFSET: 0,
 });
 
-module.exports = { kakaoUser, naverUser };
+module.exports = { kakaoUser, naverUser, GsUser, CuUser };

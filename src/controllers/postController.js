@@ -10,7 +10,7 @@ const createPost = catchError(async (req, res) => {
   }
 
   const post = await postService.createPost({ userId, title, content });
-  return res.status(201).json({ message: "SIGNUP_SUCCESS", post });
+  return res.status(201).json(post);
 });
 
 const deletePost = catchError(async (req, res) => {
