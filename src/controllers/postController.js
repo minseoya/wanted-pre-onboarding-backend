@@ -1,5 +1,6 @@
 const postService = require("../services/postService");
 const { catchError } = require("../utils/errors");
+const { Pagination } = require("../utils/enum");
 
 const createPost = catchError(async (req, res) => {
   const userId = req.user.id;
@@ -10,7 +11,7 @@ const createPost = catchError(async (req, res) => {
   }
 
   const post = await postService.createPost({ userId, title, content });
-  return res.status(201).json({ message: "SIGNUP_SUCCESS", post });
+  return res.status(201).json(post);
 });
 
 const deletePost = catchError(async (req, res) => {
@@ -18,7 +19,7 @@ const deletePost = catchError(async (req, res) => {
   const { postId } = req.params;
 
   const post = await postService.deletePostById({ userId, postId });
-  return res.status(204).json({ message: "SUCCESS", post });
+  return res.status(204).json(post);
 });
 
 const getPostById = catchError(async (req, res) => {

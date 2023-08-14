@@ -89,7 +89,7 @@ describe("Sign In/", () => {
       email: "12@kakao.com",
       password: "test",
     });
-    console.log(response.body);
+
     expect(response.body).toEqual({
       message: "비밀번호는 8자 이상이어야 합니다.",
     });

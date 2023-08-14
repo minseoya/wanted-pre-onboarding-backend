@@ -9,9 +9,9 @@
 
 ![image](https://github.com/minseoya/wanted-pre-onboarding-backend/assets/119482288/9d1ddb5e-7e3b-4064-9910-68452e007f04)
 
-
 ## 0-1 실행영상
-  - https://drive.google.com/file/d/1byshwsGO8X6v-tjZpgrULix15Exp5Dxu/view?usp=sharing
+
+- https://drive.google.com/file/d/1byshwsGO8X6v-tjZpgrULix15Exp5Dxu/view?usp=sharing
 
 ## 1. 필요한 과정
 
