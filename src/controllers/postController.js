@@ -19,7 +19,7 @@ const deletePost = catchError(async (req, res) => {
   const { postId } = req.params;
 
   const post = await postService.deletePostById({ userId, postId });
-  return res.status(204).json({ message: "SUCCESS", post });
+  return res.status(204).json(post);
 });
 
 const getPostById = catchError(async (req, res) => {
