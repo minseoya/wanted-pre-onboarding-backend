@@ -1,5 +1,6 @@
 const postService = require("../services/postService");
 const { catchError } = require("../utils/errors");
+const { Pagination } = require("../utils/enum");
 
 const createPost = catchError(async (req, res) => {
   const userId = req.user.id;
