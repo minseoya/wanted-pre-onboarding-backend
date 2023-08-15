@@ -19,6 +19,7 @@
 - dbmate up
 
 ## 2. 해당 프로젝트를 실행하기위해서는 : `nodemon server.js`
+ - Test Code start : npm test
 
 ## 3. API 요구 사항
 
@@ -27,7 +28,7 @@
 - **과제 1. 사용자 회원가입 엔드포인트**
 
   - 'POST' : localhost:3000/users/signup
-  - Req :
+  - Req : status(201)
 
   ```JSON
   BODY : {
@@ -47,7 +48,11 @@
     }
     ```
 
-- Res : {token:'ex token'}
+- Res : status(200)
+  
+  ```JSON
+  {token:'ex token'}
+  ```
 
 - **과제 3. 새로운 게시글을 생성하는 엔드포인트**
 
@@ -61,7 +66,7 @@
     }
   ```
 
-  - Res :
+  - Res : status(201)
 
   ```JSON
   [
@@ -81,7 +86,7 @@
   - 'GET' : localhost:3000/posts?offset=1
     offset 1부터 시작 한번에 10개씩
 
-  - Res :
+  - Res : status(200)
 
   ```JSON
   [
@@ -109,7 +114,7 @@
 - **과제 5. 특정 게시글을 조회하는 엔드포인트**
 
   - 'GET' : localhost:3000/posts/:postId
-  - Res :
+  - Res : status(200)
 
     ```JSON
     {
@@ -125,7 +130,7 @@
 - **과제 6. 특정 게시글을 수정하는 엔드포인트**
 
   - 'PATCH' : localhost:3000/posts
-  - Req :
+  - Req : status(201)
 
     ```JSON
     {
