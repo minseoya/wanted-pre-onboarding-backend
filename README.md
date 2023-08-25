@@ -16,13 +16,20 @@
 
 - https://drive.google.com/file/d/1byshwsGO8X6v-tjZpgrULix15Exp5Dxu/view?usp=sharing
 
+---
+
 ## 1. 필요한 과정
 
 - npm install
 - dbmate up
 
+--- 
+
 ## 2. 해당 프로젝트를 실행하기위해서는 : `nodemon server.js`
  - Test Code start : npm test
+
+
+---
 
 ## 3. API 요구 사항
 
